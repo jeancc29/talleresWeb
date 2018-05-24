@@ -22,7 +22,7 @@ $conn = new PDO( "sqlsrv:server=$serverName ; Database=talleresAzure", "jean29",
   $r  =  $cmd->fetchAll();
   //echo json_encode($r);
 
-    $a = array("codTercero" => 23, "nombre" => $data);
+    $a = array(array("codTercero" => 23, "nombre" => $data), "codTercero" => 23, "nombre" => $data);
     
 echo json_encode($a);
 
