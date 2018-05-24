@@ -20,7 +20,8 @@ $conn = new PDO( "sqlsrv:server=$serverName ; Database=talleresAzure", "jean29",
   $cmd = $conn->prepare("select * from terceros"); //exec sp_clientes_obtener_por_identificacion_nombre  :datos
   $cmd->execute();
   $r  =  $cmd->fetchAll();
-  echo json_encode($r);
+  $d = array('jean' => $data, $r);
+  echo json_encode($d);
 
 
 
