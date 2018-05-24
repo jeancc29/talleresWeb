@@ -12,7 +12,7 @@ $data=json_decode(file_get_contents("php://input"));
 
 /* Connect using Windows Authentication. */
 
-echo $data->action;
+//echo $data->action;
 
 
 if(!empty($data) && $data->action == "datos")
