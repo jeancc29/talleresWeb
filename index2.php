@@ -5,7 +5,7 @@
 
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
-$data=json_decode(file_get_contents("php://input"), true);
+$data=json_decode(file_get_contents("php://input"));
 
 //$serverName = "paginaweb1.database.windows.net";
 
