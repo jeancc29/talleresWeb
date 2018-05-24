@@ -10,7 +10,9 @@
   <title>Document</title>
   <script src="/./angular.min.js" ></script>
 </head>
-<body>
+<body ng-app="myModulePrestamo">
+<div ng-controller="myController">
+</div>
   
 
   <script>
