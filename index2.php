@@ -17,7 +17,7 @@ $data=json_decode(file_get_contents("php://input"));
 $serverName = "servidor3.database.windows.net";
 $conn = new PDO( "sqlsrv:server=$serverName ; Database=talleresAzure", "jean29", "Jean06091929");
   $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-  $cmd = $conn->prepare("select * from terceros"); //exec sp_clientes_obtener_por_identificacion_nombre  :datos
+  $cmd = $conn->prepare("select * from terceros where codTercero = 2"); //exec sp_clientes_obtener_por_identificacion_nombre  :datos
   $cmd->execute();
   $r  =  $cmd->fetchAll();
   echo json_encode($r);
