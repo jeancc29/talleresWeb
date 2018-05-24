@@ -20,7 +20,7 @@
     .module("myModulePrestamo", [])
     .controller("myController", function($scope,$http, $log){
 
-        $http.post("/./index2.php", )
+        $http.post("/./index2.php", {'action':'datos'})
              .then(function(response){
                  console.log(response.data);
                 
