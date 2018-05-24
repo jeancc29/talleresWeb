@@ -1,35 +1,30 @@
-<?php
 
 
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="/./angular.min.js" ></script>
+</head>
+<body>
+  
 
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
-$data=json_decode(file_get_contents("php://input"));
+  <script>
+      var myApp = angular
+    .module("myModulePrestamo", [])
+    .controller("myController", function($scope,$http, $log){
 
-//$serverName = "paginaweb1.database.windows.net";
-$serverName = "servidor3.database.windows.net";
-$conn = new PDO( "sqlsrv:server=$serverName ; Database=talleresAzure", "jean29", "Jean06091929");
-  $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-  $cmd = $conn->prepare("select * from terceros"); //exec sp_clientes_obtener_por_identificacion_nombre  :datos
-  $cmd->execute();
-  $r  =  $cmd->fetchAll();
-  echo json_encode($r);
+        $http.post("/./index2.php", {'action':'datos'})
+             .then(function(response){
+                 console.log(response.data);
+                
+             })
 
-/* Connect using Windows Authentication. */
-
-
-
-// if(!empty($data) && $data->action == "clientes")
-// {
-//    // echo $data->data;
-//   $conn = new PDO( "sqlsrv:server=$serverName ; Database=prestamos2", "sa", "123");
-//   $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-//   $cmd = $conn->prepare("exec sp_clientes_obtener_por_identificacion_nombre  :datos");
-//   $cmd->execute(array(':datos'=>$data->datos));
-//   $r  =  $cmd->fetchAll();
-//   echo json_encode($r);
-// }
-
-
-?>
+    }
+  </script>
+</body>
+</html>
