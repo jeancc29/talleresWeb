@@ -14,6 +14,16 @@ $data=json_decode(file_get_contents("php://input"));
 
 //echo $data->action;
 
+$serverName = "servidor3.database.windows.net";
+$conn = new PDO( "sqlsrv:server=$serverName ; Database=talleresAzure", "jean29", "Jean06091929");
+  $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+  $cmd = $conn->prepare("select * from terceros"); //exec sp_clientes_obtener_por_identificacion_nombre  :datos
+  $cmd->execute();
+  $r  =  $cmd->fetchAll();
+  echo json_encode($r);
+
+}
+
 
 if(!empty($data) && $data->action == "datos")
 {
