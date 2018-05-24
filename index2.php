@@ -5,7 +5,7 @@
 
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
-$data=json_decode(file_get_contents("php://input"));
+$data=json_decode(file_get_contents("php://input"), true);
 
 //$serverName = "paginaweb1.database.windows.net";
 
@@ -25,7 +25,7 @@ $conn = new PDO( "sqlsrv:server=$serverName ; Database=talleresAzure", "jean29",
 
 
 
-if(!empty($data) && $data->body->action == "datos")
+if(!empty($data) && $data->action == "datos")
 {
    // echo $data->data;
 //   $conn = new PDO( "sqlsrv:server=$serverName ; Database=prestamos2", "sa", "123");
