@@ -14,7 +14,7 @@ $data=json_decode(file_get_contents("php://input"));
 
 
 
-if(!empty($data) && $data->action == "clientes")
+if(!empty($data) && $data->action == "datos")
 {
    // echo $data->data;
 //   $conn = new PDO( "sqlsrv:server=$serverName ; Database=prestamos2", "sa", "123");
