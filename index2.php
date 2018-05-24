@@ -21,7 +21,7 @@ $conn = new PDO( "sqlsrv:server=$serverName ; Database=talleresAzure", "jean29",
   $cmd->execute();
   $r  =  $cmd->fetchAll();
   //$d = array(array("codTercero" => 23, "nombre" => $data['action']), array("codTercero" => 5, "nombre" => "Contreras"))
-  echo json_encode($data->action);
+  echo json_encode($data);
 
 
 
