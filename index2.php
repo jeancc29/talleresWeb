@@ -25,7 +25,7 @@ $conn = new PDO( "sqlsrv:server=$serverName ; Database=talleresAzure", "jean29",
 
 
 
-if(!empty($data) && $data->action == "datos")
+if(!empty($data) && $data["action"] == "datos")
 {
    // echo $data->data;
 //   $conn = new PDO( "sqlsrv:server=$serverName ; Database=prestamos2", "sa", "123");
