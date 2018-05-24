@@ -1,7 +1,7 @@
 <?php
 
 
-echo "<h1>Holaaaa</h1>";
+
 
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
