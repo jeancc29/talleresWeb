@@ -2,7 +2,7 @@
 
 
 
-
+header("Content-Type: application/json");
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 $data=json_decode(file_get_contents("php://input"));
@@ -21,7 +21,7 @@ $conn = new PDO( "sqlsrv:server=$serverName ; Database=talleresAzure", "jean29",
   $cmd->execute();
   $r  =  $cmd->fetchAll();
   //$d = array(array("codTercero" => 23, "nombre" => $data['action']), array("codTercero" => 5, "nombre" => "Contreras"))
-  //echo json_encode($data);
+  echo json_encode($data);
 
 
 
