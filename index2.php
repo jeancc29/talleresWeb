@@ -33,7 +33,7 @@ $d = get_object_vars($d);
 
 $a = array("jean" => "Holaaa");
 
-var_dump( $a);
+echo $a["jean"];
 
 if(!empty($d) && $d["action"] == "datos")
 {
