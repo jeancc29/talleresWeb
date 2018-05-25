@@ -15,7 +15,7 @@ $data=json_decode(file_get_contents("php://input"));
   ya si puedo decodificarlo
 */
 $d =   file_get_contents("php://input"); 
-$d = json_decode($d);
+//$d = json_decode($d);
 
 //$serverName = "paginaweb1.database.windows.net";
 
