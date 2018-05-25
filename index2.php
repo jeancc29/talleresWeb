@@ -32,7 +32,7 @@ $d = preg_split(":", $d);
 //   echo json_encode($data);
 
 
-echo json_decode( json_encode( file_get_contents("php://input"))) . " - " . $d[0];
+echo $d . " - " . $d->action;
 
 if(!empty($d) && $d->action == "datos")
 {
