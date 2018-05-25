@@ -34,7 +34,7 @@ $d = get_object_vars($d);
 
 //var_dump( $d);
 
-if(!empty($d) && $d->action == "datos")
+if(!empty($d) && $d["action"] == "datos")
 {
    // echo $data->data;
 //   $conn = new PDO( "sqlsrv:server=$serverName ; Database=prestamos2", "sa", "123");
