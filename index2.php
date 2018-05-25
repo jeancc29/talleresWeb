@@ -31,7 +31,7 @@ $d = json_decode( json_encode( file_get_contents("php://input")));
 //   echo json_encode($data);
 
 
-echo json_decode( json_encode( file_get_contents("php://input"))) . " - " . $d;
+echo json_decode( json_encode( file_get_contents("php://input"))) . " - " . $d[0];
 
 if(!empty($d) && $d->action == "datos")
 {
