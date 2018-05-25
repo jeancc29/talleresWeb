@@ -32,7 +32,7 @@ $d =   file_get_contents("php://input");
 //   echo json_encode($data);
 json_decode($d);
 
-echo $d . " - " . json_decode($d) ;
+echo $d . " - " . $data ;
 
 if(!empty($d) && $d->action == "datos")
 {
