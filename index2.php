@@ -30,7 +30,7 @@ $d =   file_get_contents("php://input");
 //   $r  =  $cmd->fetchAll();
 //   //$d = array(array("codTercero" => 23, "nombre" => $data['action']), array("codTercero" => 5, "nombre" => "Contreras"))
 //   echo json_encode($data);
-json_decode($d);
+//json_decode($d);
 
 echo $d . " - " . $data ;
 
