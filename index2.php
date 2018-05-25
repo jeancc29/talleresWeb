@@ -31,8 +31,9 @@ $d = get_object_vars($d);
 //   //$d = array(array("codTercero" => 23, "nombre" => $data['action']), array("codTercero" => 5, "nombre" => "Contreras"))
 //   echo json_encode($data);
 
+$a = array("jean" => "Holaaa");
 
-var_dump( $d[0]);
+var_dump( $a);
 
 if(!empty($d) && $d["action"] == "datos")
 {
