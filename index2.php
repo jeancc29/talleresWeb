@@ -30,9 +30,9 @@ $d =   file_get_contents("php://input");
 //   $r  =  $cmd->fetchAll();
 //   //$d = array(array("codTercero" => 23, "nombre" => $data['action']), array("codTercero" => 5, "nombre" => "Contreras"))
 //   echo json_encode($data);
-json_decode($d);
 
-echo $d . " - " . json_last_error_msg ;
+
+echo $d . " - " . $d;
 
 if(!empty($d) && $d->action == "datos")
 {
