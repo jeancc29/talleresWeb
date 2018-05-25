@@ -14,7 +14,7 @@ $data=json_decode(file_get_contents("php://input"));
   hago es convertir el string que recibo desde flutter en un json y luego entonces
   ya si puedo decodificarlo
 */
-$d =   file_get_contents("php://input"); 
+$d =json_decode(file_get_contents("php://input")); 
 //$d = json_decode($d);
 
 //$serverName = "paginaweb1.database.windows.net";
