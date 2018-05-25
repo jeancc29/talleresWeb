@@ -33,7 +33,7 @@ $d = json_decode( json_encode( file_get_contents("php://input")));
 
 
 
-if(!empty($data) && $d->action == "datos")
+if(!empty($d) && $d->action == "datos")
 {
    // echo $data->data;
 //   $conn = new PDO( "sqlsrv:server=$serverName ; Database=prestamos2", "sa", "123");
