@@ -19,7 +19,7 @@ if($_REQUEST['REQUEST_METHOD'] == "POST"){
   echo "Post: " . $post;
 }
 else{
-  echo "No: ". $_REQUEST['REQUEST_METHOD'];
+  echo "No: ". $_REQUEST['REQUEST_METHOD']. $data;
 }
 
 // $serverName = "servidor3.database.windows.net";
