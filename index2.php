@@ -15,7 +15,7 @@ $data=json_decode(file_get_contents("php://input"));
 //echo $data->action;
 
 if($_REQUEST['REQUEST_METHOD'] == "POST"){
-  $post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+  $post = filter_input_array(INPUT_POSRRT, FILTER_SANITIZE_STRING);
   echo "Post: " . $post;
 }
 else{
