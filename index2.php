@@ -14,14 +14,22 @@ $data=json_decode(file_get_contents("php://input"));
 
 //echo $data->action;
 
-$serverName = "servidor3.database.windows.net";
-$conn = new PDO( "sqlsrv:server=$serverName ; Database=talleresAzure", "jean29", "Jean06091929");
-  $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-  $cmd = $conn->prepare("select * from terceros"); //exec sp_clientes_obtener_por_identificacion_nombre  :datos
-  $cmd->execute();
-  $r  =  $cmd->fetchAll();
-  //$d = array(array("codTercero" => 23, "nombre" => $data['action']), array("codTercero" => 5, "nombre" => "Contreras"))
-  echo json_encode($data);
+if($_REQUEST['REQUEST_METHOD'] == "POST"){
+  $post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+  echo "Post: " . $post;
+}
+else{
+  echo "No";
+}
+
+// $serverName = "servidor3.database.windows.net";
+// $conn = new PDO( "sqlsrv:server=$serverName ; Database=talleresAzure", "jean29", "Jean06091929");
+//   $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+//   $cmd = $conn->prepare("select * from terceros"); //exec sp_clientes_obtener_por_identificacion_nombre  :datos
+//   $cmd->execute();
+//   $r  =  $cmd->fetchAll();
+//   //$d = array(array("codTercero" => 23, "nombre" => $data['action']), array("codTercero" => 5, "nombre" => "Contreras"))
+//   echo json_encode($data);
 
 
 
