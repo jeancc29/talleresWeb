@@ -19,7 +19,7 @@ if($_REQUEST['REQUEST_METHOD'] == "POST"){
   echo "Post: " . $post;
 }
 else{
-  echo "No: ". json_decode(file_get_contents("php://input")) ;
+  echo "No: ". file_get_contents("php://input")[0] ;
 }
 
 // $serverName = "servidor3.database.windows.net";
