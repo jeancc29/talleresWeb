@@ -32,7 +32,7 @@ $d = get_object_vars($d);
 //   echo json_encode($data);
 
 
-var_dump( $d);
+var_dump( $d[0]);
 
 if(!empty($d) && $d["action"] == "datos")
 {
