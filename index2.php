@@ -112,8 +112,8 @@ if(!empty($d) && $d["action"] == "articulosTodos")
 $serverName = "servidor3.database.windows.net";
 $conn = new PDO( "sqlsrv:server=$serverName ; Database=talleresAzure", "jean29", "Jean06091929");
   $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-  $cmd = $conn->prepare("select * from vw_articulos where codCliente = :codCliente"); //exec sp_clientes_obtener_por_identificacion_nombre  :datos
-  $cmd->execute(array(":codCliente" => $d["codCliente"]));
+  $cmd = $conn->prepare("select * from vw_articulos"); //exec sp_clientes_obtener_por_identificacion_nombre  :datos
+  $cmd->execute();
   $r  =  $cmd->fetchAll();
   echo json_encode($r);
 
