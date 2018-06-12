@@ -148,7 +148,7 @@ $conn = new PDO( "sqlsrv:server=$serverName ; Database=talleresAzure", "jean29",
                           ":cu" => 1
 
                         ));
-  $r  =  $cmd->fetchAll();
+  //$r  =  $cmd->fetchAll();
 
 
   $cmd = $conn->prepare("exec sp_entradas_actualizar 
@@ -168,7 +168,7 @@ $conn = new PDO( "sqlsrv:server=$serverName ; Database=talleresAzure", "jean29",
                           ":de" => "Hola"
 
                         ));
-  $r  =  $cmd->fetchAll();
+  //$r  =  $cmd->fetchAll();
   echo json_encode("holaaaaaaaaaaaaaaaaaa");
 
 
