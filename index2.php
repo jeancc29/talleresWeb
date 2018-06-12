@@ -151,23 +151,23 @@ $conn = new PDO( "sqlsrv:server=$serverName ; Database=talleresAzure", "jean29",
   //$r  =  $cmd->fetchAll();
 
 
-  // $cmd = $conn->prepare("exec sp_entradas_actualizar 
-  //                         @codEntrada = :ce, 
-  //                         @codArti = :ca,
-  //                         @cantidad = :c,
-  //                         @descripcion = :d,
-  //                         @codUnidadEntrada = :cue,
-  //                         @detalle = :de
-  //                     "); //exec sp_clientes_obtener_por_identificacion_nombre  :datos
-  // $cmd->execute(array(
-  //                         ":ce" => 1,
-  //                         ":ca" => 1,
-  //                         ":c" => 1,
-  //                         ":d" => "puerta",
-  //                         ":cue" => 1,
-  //                         ":de" => "Hola"
+  $cmd = $conn->prepare("exec sp_entradas_actualizar 
+                          @codEntrada = :ce, 
+                          @codArti = :ca,
+                          @cantidad = :c,
+                          @descripcion = :d,
+                          @codUnidadEntrada = :cue,
+                          @detalle = :de
+                      "); //exec sp_clientes_obtener_por_identificacion_nombre  :datos
+  $cmd->execute(array(
+                          ":ce" => 1,
+                          ":ca" => 1,
+                          ":c" => 1,
+                          ":d" => "puerta",
+                          ":cue" => 1,
+                          ":de" => "Hola"
 
-  //                       ));
+                        ));
   //$r  =  $cmd->fetchAll();
   echo json_encode("holaaaaaaaaaaaaaaaaaa");
 
