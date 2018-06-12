@@ -139,7 +139,7 @@ $conn = new PDO( "sqlsrv:server=$serverName ; Database=talleresAzure", "jean29",
                           @codEntrada = :ce, 
                           @codCliente = :cc,
                           @codProyecto = :cp,
-                          @codUsuario = :cu,
+                          @codUsuario = :cu
                       "); //exec sp_clientes_obtener_por_identificacion_nombre  :datos
   $cmd->execute(array(
                           ":ce" => 1,
