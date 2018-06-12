@@ -151,7 +151,7 @@ $conn = new PDO( "sqlsrv:server=$serverName ; Database=talleresAzure", "jean29",
   //$r  =  $cmd->fetchAll();
 
 
-  $cmd = $conn->prepare("exec sp_entradas_actualizar 
+  $cmd = $conn->prepare("exec sp_detalles_entrada_actualizar 
                           @codEntrada = :ce, 
                           @codArti = :ca,
                           @cantidad = :c,
