@@ -121,4 +121,59 @@ $conn = new PDO( "sqlsrv:server=$serverName ; Database=talleresAzure", "jean29",
 }
 
 
+
+if(!empty($d) && $d["action"] == "entradasGuardar")
+{
+   // echo $data->data;
+//   $conn = new PDO( "sqlsrv:server=$serverName ; Database=prestamos2", "sa", "123");
+//   $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+//   $cmd = $conn->prepare("exec sp_clientes_obtener_por_identificacion_nombre  :datos");
+//   $cmd->execute(array(':datos'=>$data->datos));
+//   $r  =  $cmd->fetchAll();
+//   echo json_encode($r);
+
+$serverName = "servidor3.database.windows.net";
+$conn = new PDO( "sqlsrv:server=$serverName ; Database=talleresAzure", "jean29", "Jean06091929");
+  $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+  $cmd = $conn->prepare("exec sp_entradas_actualizar 
+                          @codEntrada = :ce, 
+                          @codCliente = :cc,
+                          @codProyecto = :cp,
+                          @codUsuario = :cu,
+                      "); //exec sp_clientes_obtener_por_identificacion_nombre  :datos
+  $cmd->execute();
+  $r  =  $cmd->fetchAll(array(
+                          ":ce" => 1,
+                          ":cc" => 1,
+                          ":cp" => 1,
+                          ":cu" => 1
+
+                        ));
+
+
+  $cmd = $conn->prepare("exec sp_entradas_actualizar 
+                          @codEntrada = :ce, 
+                          @codArti = :ca,
+                          @cantidad = :c,
+                          @descripcion = :d,
+                          @codUnidadEntrada = :cue,
+                          @detalle = :de
+                      "); //exec sp_clientes_obtener_por_identificacion_nombre  :datos
+  $cmd->execute();
+  $r  =  $cmd->fetchAll(array(
+                          ":ce" => 1,
+                          ":ca" => 1,
+                          ":c" => 1,
+                          ":d" => "puerta",
+                          ":cue" => 1,
+                          ":de" => "Hola"
+
+                        ));
+  echo json_encode($r);
+
+
+}
+
+
+
 ?>
